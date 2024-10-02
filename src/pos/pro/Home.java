@@ -4,6 +4,7 @@ package pos.pro;
 
 public class Home extends javax.swing.JFrame {
 
+    JpanelLoader jpload = new JpanelLoader();
     
     public Home() {
         initComponents();
@@ -26,7 +27,7 @@ public class Home extends javax.swing.JFrame {
         jToggleButton6 = new javax.swing.JToggleButton();
         jToggleButton7 = new javax.swing.JToggleButton();
         jToggleButton8 = new javax.swing.JToggleButton();
-        Panel_load = new javax.swing.JPanel();
+        panel_load = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -144,16 +145,16 @@ public class Home extends javax.swing.JFrame {
                 .addContainerGap(154, Short.MAX_VALUE))
         );
 
-        Panel_load.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        panel_load.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        javax.swing.GroupLayout Panel_loadLayout = new javax.swing.GroupLayout(Panel_load);
-        Panel_load.setLayout(Panel_loadLayout);
-        Panel_loadLayout.setHorizontalGroup(
-            Panel_loadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout panel_loadLayout = new javax.swing.GroupLayout(panel_load);
+        panel_load.setLayout(panel_loadLayout);
+        panel_loadLayout.setHorizontalGroup(
+            panel_loadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 967, Short.MAX_VALUE)
         );
-        Panel_loadLayout.setVerticalGroup(
-            Panel_loadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        panel_loadLayout.setVerticalGroup(
+            panel_loadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
@@ -180,7 +181,7 @@ public class Home extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(Panel_load, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(panel_load, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -193,7 +194,7 @@ public class Home extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap())
-                    .addComponent(Panel_load, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(panel_load, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         pack();
@@ -216,19 +217,35 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_jToggleButton5ActionPerformed
 
     private void jToggleButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton4ActionPerformed
-        // TODO add your handling code here:
+        // emp load
+        
+        employee emp = new employee();
+        jpload.jPanelLoader(panel_load, emp);
+        
     }//GEN-LAST:event_jToggleButton4ActionPerformed
 
     private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton3ActionPerformed
-        // TODO add your handling code here:
+        // pro load
+        
+        product pro = new product();
+        jpload.jPanelLoader(panel_load, pro);
     }//GEN-LAST:event_jToggleButton3ActionPerformed
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
-        // TODO add your handling code here:
+        
+        supplier sp = new supplier();
+        jpload.jPanelLoader(panel_load, sp);
+        
+        
     }//GEN-LAST:event_jToggleButton2ActionPerformed
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        // TODO add your handling code here:
+        // coustmer load
+        
+        customer cus = new customer();
+        jpload.jPanelLoader(panel_load, cus);
+        
+        
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     /**
@@ -268,7 +285,6 @@ public class Home extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup Home_btn_grp;
-    private javax.swing.JPanel Panel_load;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JToggleButton jToggleButton1;
@@ -279,5 +295,6 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JToggleButton jToggleButton6;
     private javax.swing.JToggleButton jToggleButton7;
     private javax.swing.JToggleButton jToggleButton8;
+    private javax.swing.JPanel panel_load;
     // End of variables declaration//GEN-END:variables
 }
